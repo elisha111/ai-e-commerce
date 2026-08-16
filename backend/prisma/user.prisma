@@ -1,0 +1,19 @@
+enum Role {
+    BUYER
+    SELLER
+}
+
+model User {
+    id           String   @id @default(cuid())
+    email        String   @unique
+    name         String
+    password     String
+    role         Role     @default(BUYER)
+    refreshToken String
+    createdAt    DateTime @default(now())
+
+    orders   Order[]
+    products Product[]
+
+    @@map("users")
+}

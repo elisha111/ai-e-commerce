@@ -1,0 +1,12 @@
+.env
+**/.env
+
+node_modules
+**/node_modules
+
+**/dist
+/generated
+**/generated
+
+*.log
+.DS_Store
