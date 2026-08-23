@@ -8,6 +8,9 @@ model Product {
     rating      Decimal  @db.Decimal(2, 1)
     inStock     Boolean  @default(true)
     features    String[]
+
+    salePrice Decimal? @db.Decimal(10, 2)
+    dealExpriresAt DateTime
     createdAt   DateTime @default(now())
     updatedAt   DateTime @updatedAt
 
