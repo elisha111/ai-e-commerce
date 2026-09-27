@@ -9,7 +9,7 @@ model User {
     name         String
     password     String
     role         Role     @default(BUYER)
-    refreshToken String
+    refreshToken String?
     createdAt    DateTime @default(now())
 
     orders   Order[]
